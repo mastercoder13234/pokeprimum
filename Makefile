@@ -1,5 +1,5 @@
 # GBA rom header
-TITLE       := POKEMON EMER
+TITLE       := POKEMON PRIM
 GAME_CODE   := BPEE
 MAKER_CODE  := 01
 REVISION    := 0
@@ -7,16 +7,16 @@ MODERN      ?= 0
 KEEP_TEMPS  ?= 0
 
 # `File name`.gba ('_modern' will be appended to the modern builds)
-FILE_NAME := pokeemerald
+FILE_NAME := pokeprimum
 BUILD_DIR := build
 
 # Builds the ROM using a modern compiler
-MODERN      ?= 0
+MODERN      ?= 1
 # Compares the ROM to a checksum of the original - only makes sense using when non-modern
 COMPARE     ?= 0
 
-ifeq (modern,$(MAKECMDGOALS))
-  MODERN := 1
+ifeq (legacy,$(MAKECMDGOALS))
+  MODERN := 0
 endif
 ifeq (compare,$(MAKECMDGOALS))
   COMPARE := 1
@@ -68,7 +68,7 @@ else
 endif
 
 ROM_NAME := $(FILE_NAME).gba
-OBJ_DIR_NAME := $(BUILD_DIR)/emerald
+OBJ_DIR_NAME := $(BUILD_DIR)/primum
 MODERN_ROM_NAME := $(FILE_NAME)_modern.gba
 MODERN_OBJ_DIR_NAME := $(BUILD_DIR)/modern
 
