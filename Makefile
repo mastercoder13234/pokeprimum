@@ -11,7 +11,7 @@ FILE_NAME := pokeprimum
 BUILD_DIR := build
 
 # Builds the ROM using a modern compiler
-MODERN      ?= 1
+MODERN      := 1
 # Compares the ROM to a checksum of the original - only makes sense using when non-modern
 COMPARE     ?= 0
 
