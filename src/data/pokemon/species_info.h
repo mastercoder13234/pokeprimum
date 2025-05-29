@@ -1,6 +1,8 @@
+#include "species_info/species.h"
 // Maximum value for a female Pokémon is 254 (MON_FEMALE) which is 100% female.
 // 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
 #define PERCENT_FEMALE(percent) min(254, ((percent * 255) / 100))
+
 
 #define OLD_UNOWN_SPECIES_INFO                                                          \
     {                                                                                   \
@@ -36,35 +38,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 {
     [SPECIES_NONE] = {0},
 
-    [SPECIES_BULBASAUR] =
-    {
-        .baseHP        = 45,
-        .baseAttack    = 49,
-        .baseDefense   = 49,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
-        .types = { TYPE_GRASS, TYPE_POISON },
-        .catchRate = 45,
-        .expYield = 64,
-        .evYield_HP        = 0,
-        .evYield_Attack    = 0,
-        .evYield_Defense   = 0,
-        .evYield_Speed     = 0,
-        .evYield_SpAttack  = 1,
-        .evYield_SpDefense = 0,
-        .itemCommon = ITEM_NONE,
-        .itemRare   = ITEM_NONE,
-        .genderRatio = PERCENT_FEMALE(12.5),
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },
-        .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
-        .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
-        .noFlip = FALSE,
-    },
+    [SPECIES_BULBASAUR] = SPECIES_INFO_BULBASAUR,
 
     [SPECIES_IVYSAUR] =
     {
@@ -2766,6 +2740,95 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
+    [SPECIES_GASTLY] =
+    {
+        .baseHP        = 30,
+        .baseAttack    = 35,
+        .baseDefense   = 30,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 35,
+        .types = { TYPE_GHOST, TYPE_POISON },
+        .catchRate = 190,
+        .expYield = 95,
+        .evYield_HP        = 0,
+        .evYield_Attack    = 0,
+        .evYield_Defense   = 0,
+        .evYield_Speed     = 0,
+        .evYield_SpAttack  = 1,
+        .evYield_SpDefense = 0,
+        .itemCommon = ITEM_NONE,
+        .itemRare   = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
+        .safariZoneFleeRate = 0,
+        .bodyColor = BODY_COLOR_PURPLE,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_HAUNTER] =
+    {
+        .baseHP        = 45,
+        .baseAttack    = 50,
+        .baseDefense   = 45,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 115,
+        .baseSpDefense = 55,
+        .types = { TYPE_GHOST, TYPE_POISON },
+        .catchRate = 90,
+        .expYield = 126,
+        .evYield_HP        = 0,
+        .evYield_Attack    = 0,
+        .evYield_Defense   = 0,
+        .evYield_Speed     = 0,
+        .evYield_SpAttack  = 2,
+        .evYield_SpDefense = 0,
+        .itemCommon = ITEM_NONE,
+        .itemRare   = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
+        .safariZoneFleeRate = 0,
+        .bodyColor = BODY_COLOR_PURPLE,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_GENGAR] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 65,
+        .baseDefense   = 60,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 75,
+        .types = { TYPE_GHOST, TYPE_POISON },
+        .catchRate = 45,
+        .expYield = 190,
+        .evYield_HP        = 0,
+        .evYield_Attack    = 0,
+        .evYield_Defense   = 0,
+        .evYield_Speed     = 0,
+        .evYield_SpAttack  = 3,
+        .evYield_SpDefense = 0,
+        .itemCommon = ITEM_NONE,
+        .itemRare   = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
+        .safariZoneFleeRate = 0,
+        .bodyColor = BODY_COLOR_PURPLE,
+        .noFlip = FALSE,
+    },
 
     [SPECIES_ONIX] =
     {

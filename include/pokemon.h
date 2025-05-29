@@ -1,6 +1,4 @@
-#ifndef GUARD_POKEMON_H
-#define GUARD_POKEMON_H
-
+#pragma once
 #include "sprite.h"
 
 // Property labels for Get(Box)MonData / Set(Box)MonData
@@ -544,4 +542,3 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 managerId, u8 mode);
 void DestroyMonSpritesGfxManager(u8 managerId);
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum);
 
-#endif // GUARD_POKEMON_H

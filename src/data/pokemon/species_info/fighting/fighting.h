@@ -1,0 +1,15 @@
+#pragma once
+
+#include "hariyama.h"
+#include "hitmonchan.h"
+#include "hitmonlee.h"
+#include "hitmontop.h"
+#include "machamp.h"
+#include "machoke.h"
+#include "machop.h"
+#include "makuhita.h"
+#include "mankey.h"
+#include "medicham.h"
+#include "meditite.h"
+#include "primeape.h"
+#include "tyrogue.h"

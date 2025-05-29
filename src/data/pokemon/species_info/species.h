@@ -1,0 +1,18 @@
+#pragma once
+
+#include "bug/bug.h"
+#include "dark/dark.h"
+#include "dragon/dragon.h"
+#include "electric/electric.h"
+#include "fighting/fighting.h"
+#include "fire/fire.h"
+#include "ghost/ghost.h"
+#include "grass/grass.h"
+#include "ground/ground.h"
+#include "ice/ice.h"
+#include "normal/normal.h"
+#include "poison/poison.h"
+#include "psychic/psychic.h"
+#include "rock/rock.h"
+#include "steel/steel.h"
+#include "water/water.h"
